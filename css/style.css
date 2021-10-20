@@ -1,0 +1,91 @@
+.logo-row {
+    height: 20vh;
+}
+.tab-row {
+    height: 5vh;
+}
+.clock-row {
+    height: 50vh;
+}
+.buttons-row {
+    height: 18vh;
+}
+
+.me-pic {
+    background-image: url("img/me.jpeg");
+    /* height: 40px !important; */
+    /* width: 40px !important; */
+    display: inline !important;
+}
+
+.tab-btn {
+    background-color: #F7F7F7;
+    color: #000;
+    width: 120px;
+    border-radius: 15px;
+}
+
+.tab-selected {
+    background-color: #000000;
+    color: #fff;
+}
+
+
+
+#pause-stopwatch-icon {
+    font-size: 30px !important;
+    line-height: 50px !important;
+    transition: 300ms;
+}
+
+.hours .minutes .seconds {
+    font-size: large;
+}
+
+.hours, .minutes, .seconds {
+    line-height: 16vw; 
+    font-size: 15vw;
+}
+
+.hours-label, .minutes-label, .seconds-label {
+    font-size: 2vw;
+}
+
+
+.my-button {
+    border: none !important;
+    background-color: #F7F7F7 !important;
+    border-radius: 30px !important;
+    padding: 0px !important;
+    width: 80px !important;
+    height: 80px !important;
+    transition: 300ms;
+}
+.my-button:hover {
+    background-color: #efefef !important;
+}
+
+.footer-button {
+    background-color: #F7F7F7 !important;
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 40px !important;
+    border: none !important;
+}
+
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.fs-small {
+    font-size: 15px;
+}
