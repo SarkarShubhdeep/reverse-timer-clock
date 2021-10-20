@@ -21,6 +21,7 @@ function dark_mode_toggle() {
         dark_mode_icon.style.color = "#fff";
         document.body.style.backgroundColor = "#000";
         document.body.style.color = "#fff";
+        document.getElementById("logo").attributes.src = "img/dark_logo.png";
         dark_mode = !dark_mode;
     }
     else if (dark_mode) {
@@ -29,8 +30,8 @@ function dark_mode_toggle() {
         dark_mode_icon.style.color = "#000";
         document.body.style.backgroundColor = "#fff";
         document.body.style.color = "#000";
+        document.getElementById("logo").src = "img/light_logo.png";
         dark_mode = !dark_mode;
-
     }
 }
 
