@@ -16,7 +16,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Hello, world!</title>
+    <title>Clock</title>
   </head>
   <body>
 
@@ -92,8 +92,8 @@
         <div class="row ps-4 pe-4 d-flex align-items-center">
             <div class="col">
                 <div class="row d-flex justify-content-end" style="text-align: right;">
-                    <button class="footer-button d-flex justify-content-center align-items-center me-3">
-                        <span class="material-icons">dark_mode</span>
+                    <button id="dark-mode-btn" onclick="dark_mode_toggle()" class="footer-button d-flex justify-content-center align-items-center me-3">
+                        <span class="material-icons" id="dark-mode-icon">dark_mode</span>
                     </button>
                     
                     <button class="footer-button d-flex justify-content-center align-items-center" style="width: auto; color: #000" data-bs-toggle="modal" data-bs-target="#infoModal">

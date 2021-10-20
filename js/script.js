@@ -9,7 +9,30 @@ let start_stopwatch_btn = document.getElementById("start-stopwatch-btn");
 let start_stopwatch_icon = document.getElementById("start-stopwatch-icon");
 let pause_stopwatch_btn = document.getElementById("pause-stopwatch-btn");
 let pause_stopwatch_icon = document.getElementById("pause-stopwatch-icon");
+let dark_mode_btn = document.getElementById("dark-mode-btn");
+let dark_mode_icon = document.getElementById("dark-mode-icon");
 
+var dark_mode = false;
+
+function dark_mode_toggle() {
+    if (!dark_mode) {
+        dark_mode_btn.style.backgroundColor = "#1c1c1c";
+        dark_mode_icon.innerHTML = "light_mode";
+        dark_mode_icon.style.color = "#fff";
+        document.body.style.backgroundColor = "#000";
+        document.body.style.color = "#fff";
+        dark_mode = !dark_mode;
+    }
+    else if (dark_mode) {
+        dark_mode_btn.style.backgroundColor = "#F7F7F7";
+        dark_mode_icon.innerHTML = "dark_mode";
+        dark_mode_icon.style.color = "#000";
+        document.body.style.backgroundColor = "#fff";
+        document.body.style.color = "#000";
+        dark_mode = !dark_mode;
+
+    }
+}
 
 // while (index < 60) {
 //     setInterval(seconds.innerHTML++, 1000);
