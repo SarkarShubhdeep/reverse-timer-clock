@@ -32,8 +32,8 @@
     <div class="container-fluid">
         <div class="row tab-row d-flex align-items-center justify-contents-center">
             <div class="col text-center">
-                <button class="btn tab-btn tab-selected">Stopwatch</button>
-                <button class="btn tab-btn">Timer</button>
+                <button class="m-1 btn tab-btn tab-selected">Stopwatch</button>
+                <button class="m-1 btn clickable tab-btn">Timer</button>
             </div>
         </div>
     </div>
@@ -71,15 +71,15 @@
         <div class="row buttons-row d-flex align-items-center">
             <div class="col">
                 <div class="row p-3 d-flex justify-content-center">
-                    <button onclick="start_stopwatch()" id="start-stopwatch-btn" class="m-2 my-button form-control">
+                    <button onclick="start_stopwatch()" id="start-stopwatch-btn" class="m-2 my-button form-control clickable">
                         <span id="start-stopwatch-icon"
                         class="material-icons" style="font-size: 30px; line-height:50px">play_arrow</span>
                     </button>
-                    <button onclick="pause_stopwatch()" id="pause-stopwatch-btn" class="m-2 my-button form-control">
+                    <button onclick="pause_stopwatch()" id="pause-stopwatch-btn" class="m-2 my-button form-control clickable">
                         <span id="pause-stopwatch-icon"
                         class="material-icons">pause</span>
                     </button>
-                    <button onclick="reset_stopwatch()" id="reset-stopwatch-btn" class="m-2 my-button form-control">
+                    <button onclick="reset_stopwatch()" id="reset-stopwatch-btn" class="m-2 my-button form-control clickable">
                         <span id="reset-stopwatch-icon"
                         class="material-icons" style="font-size: 30px; line-height:50px">replay</span>
                     </button>
@@ -92,35 +92,56 @@
         <div class="row ps-4 pe-4 d-flex align-items-center">
             <div class="col">
                 <div class="row d-flex justify-content-end" style="text-align: right;">
-                    <button id="dark-mode-btn" onclick="dark_mode_toggle()" class="footer-button d-flex justify-content-center align-items-center me-3">
+                    <button id="dark-mode-btn" onclick="dark_mode_toggle()" class="footer-button d-flex justify-content-center align-items-center me-3 clickable">
                         <span class="material-icons" id="dark-mode-icon">dark_mode</span>
                     </button>
                     
-                    <button class="footer-button d-flex justify-content-center align-items-center" style="width: auto; color: #000" data-bs-toggle="modal" data-bs-target="#infoModal">
-                        <span class="material-icons">info</span>
+                    <button id="info-btn" class="footer-button d-flex justify-content-center align-items-center clickable" data-bs-toggle="modal" data-bs-target="#infoModal">
+                        <span class="material-icons" id="info-icon">info</span>
                     </button>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- modal fade -->
    
     <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content br-20px pb-2" id="info-modal">
+                <div class="modal-header border-0 br-20px">
+                    <div class="col text-center ps-5">
+                        <img src="img/light_logo.png" id="info-modal-logo" height="20" alt="" srcset="">
+                    </div>
+                    <button type="button" class="btn-close footer-button" id="info-modal-close-icon" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body ps-4 pe-4">
                     <div class="row">
-                        <div class="col text-center">
-                            <img src="img/light_logo.png" height="20" alt="" srcset="">
-                            <div class="row">
-                                A simple clock application made by 
-                                <div class="me-pic">
-                                    <img src="img/me.jpeg" class="border rounded-circle" alt="">
-                                </div>
-                            </div>
+                        <div class="col">
+                            A simple clock web application made by Shubhdeep Sarkar.
+
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="" style="width: 50px;">
+                            <img src="img/me.jpeg" class="rounded-circle" height="50px" alt="">
+                        </div>
+                        <div class="col ps-4  d-flex align-items-center">
+                            👈 Shubhdeep Sarkar.
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            I kept the name Reverse because it was supposed to be just a countdown timer for my personal use. But it's a complete clock now written in basic HTML, Bootstrap, and JS. 
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            Email: <i>sarkarshubhdeep1@gmail.com</i>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col" style="word-wrap: break-word;">
+                            Project respository: <i>https://github.com/SarkarShubhdeep/reverse-timer-clock</i>
                         </div>
                     </div>
                 </div>

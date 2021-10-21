@@ -11,34 +11,58 @@ let pause_stopwatch_btn = document.getElementById("pause-stopwatch-btn");
 let pause_stopwatch_icon = document.getElementById("pause-stopwatch-icon");
 let dark_mode_btn = document.getElementById("dark-mode-btn");
 let dark_mode_icon = document.getElementById("dark-mode-icon");
+let info_btn = document.getElementById("info-btn");
+let info_icon = document.getElementById("info-icon");
+let clickables = document.getElementsByClassName("clickable");
+let info_modal = document.getElementById("info-modal");
+let info_modal_logo = document.getElementById("info-modal-logo");
+
 
 var dark_mode = false;
 
 function dark_mode_toggle() {
     if (!dark_mode) {
-        dark_mode_btn.style.backgroundColor = "#1c1c1c";
+        
+        info_modal.style.backgroundColor = "#313131";
+        start_stopwatch_btn.style.backgroundColor = "#313131";
+        pause_stopwatch_btn.style.backgroundColor = "#313131";
+        reset_stopwatch_btn.style.backgroundColor = "#313131";
+        start_stopwatch_icon.style.color = "#fff";
+        pause_stopwatch_icon.style.color = "#fff";
+        reset_stopwatch_icon.style.color = "#fff";
+        dark_mode_btn.style.backgroundColor = "#313131";
         dark_mode_icon.innerHTML = "light_mode";
         dark_mode_icon.style.color = "#fff";
         document.body.style.backgroundColor = "#000";
         document.body.style.color = "#fff";
-        document.getElementById("logo").attributes.src = "img/dark_logo.png";
+        document.getElementById("logo").src = "img/dark_logo.png";
+        info_modal_logo.src = "img/dark_logo.png";
+        info_btn.style.backgroundColor = "#313131";
+        info_icon.style.color = "#fff";
         dark_mode = !dark_mode;
     }
+
     else if (dark_mode) {
-        dark_mode_btn.style.backgroundColor = "#F7F7F7";
+        info_modal.style.backgroundColor = "#ededed";
+        start_stopwatch_btn.style.backgroundColor = "#ededed";
+        pause_stopwatch_btn.style.backgroundColor = "#ededed";
+        reset_stopwatch_btn.style.backgroundColor = "#ededed";
+        start_stopwatch_icon.style.color = "#000";
+        pause_stopwatch_icon.style.color = "#000";
+        reset_stopwatch_icon.style.color = "#000";
+        dark_mode_btn.style.backgroundColor = "#ededed";
         dark_mode_icon.innerHTML = "dark_mode";
         dark_mode_icon.style.color = "#000";
         document.body.style.backgroundColor = "#fff";
         document.body.style.color = "#000";
         document.getElementById("logo").src = "img/light_logo.png";
+        info_modal_logo.src = "img/light_logo.png";
+        info_btn.style.backgroundColor = "#ededed";
+        info_icon.style.color = "#000";
         dark_mode = !dark_mode;
     }
 }
 
-// while (index < 60) {
-//     setInterval(seconds.innerHTML++, 1000);
-//     index++;
-// }
 
 
 var stopwatch_run = false;
@@ -50,7 +74,7 @@ var index_hrs = 00;
 function pause_stopwatch_disabled() {
     pause_stopwatch_btn.disabled = true;
     pause_stopwatch_icon.style.opacity = "0.3";
-    pause_stopwatch_btn.style.opacity = "0.9";
+    pause_stopwatch_btn.style.opacity = "0.5";
 }
 function pause_stopwatch_enabled() {
     pause_stopwatch_btn.disabled = false;
@@ -60,7 +84,7 @@ function pause_stopwatch_enabled() {
 function start_stopwatch_disabled() {
     start_stopwatch_btn.disabled = true;
     start_stopwatch_icon.style.opacity = "0.3";
-    start_stopwatch_btn.style.opacity = "0.9";
+    start_stopwatch_btn.style.opacity = "0.5";
 }
 function start_stopwatch_enabled() {
     start_stopwatch_btn.disabled = false;
@@ -69,7 +93,7 @@ function start_stopwatch_enabled() {
 }
 function reset_stopwatch_disabled() {
     reset_stopwatch_btn.disabled = true;
-    reset_stopwatch_btn.style.opacity = "0.9";
+    reset_stopwatch_btn.style.opacity = "0.5";
     reset_stopwatch_icon.style.opacity = "0.3";
 }
 function reset_stopwatch_enabled() {
