@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+
 body {transition: 300ms;}
 .logo-row {
     height: 20vh;
